@@ -3,7 +3,7 @@
 You can write code:
 
 ```
-const example = _ () ?> {
+const example = _ () => {
     return 0;
 };
 ```
@@ -17,3 +17,9 @@ Creating a list:
 ## A subtitle
 
 And also, links, like [this one](https://k3lly.dev) to my website.
+
+## Images
+
+Also, you can use images, such as the Polymer logo in `.png` format for example:
+
+![Polymer logo](images/polymer.png)
