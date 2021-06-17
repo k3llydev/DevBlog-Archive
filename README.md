@@ -1,5 +1,2 @@
-# My blog posts
+# Node usage manual
 
-Visit me at:
-
-[k3lly.dev](https://k3lly.dev)
