@@ -22,4 +22,4 @@ And also, links, like [this one](https://k3lly.dev) to my website.
 
 Also, you can use images, such as the Polymer logo in `.png` format for example:
 
-![Polymer logo](images/polymer.png)
+![Polymer logo](polymer.png)
