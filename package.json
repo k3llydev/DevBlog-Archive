@@ -1,28 +1,25 @@
 {
-  "name": "blog.k3lly.dev",
+  "name": "devblog-archive",
   "version": "1.0.0",
-  "description": "Visit me at:",
-  "main": "index.js",
+  "description": "",
   "scripts": {
-    "build": "node build-archive.js",
-    "post:delete": "node delete-post.js",
-    "post:create": "node create-post.js && npm run post:open",
-    "post:open": "open ./post/content.md -a Typora",
-    "post:save": "node save-post.js"
+    "build": "node ./build.js",
+    "clean": "node ./clean.js",
+    "prebuild": "npm run clean"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k3llydev/blog.k3lly.dev.git"
+    "url": "https://github.com/k3llydev/DevBlog-Archive.git"
   },
-  "author": "",
+  "author": "k3llydev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/k3llydev/blog.k3lly.dev/issues"
+    "url": "https://github.com/k3llydev/DevBlog-Archive/issues"
   },
-  "homepage": "https://github.com/k3llydev/blog.k3lly.dev",
+  "homepage": "https://github.com/k3llydev/DevBlog-Archive",
   "dependencies": {
     "gh-pages": "^3.2.1",
-    "moment": "^2.29.1",
-    "prompt-sync": "^4.2.0"
+    "highlight.js": "^11.5.1",
+    "markdown-it": "^13.0.0"
   }
 }

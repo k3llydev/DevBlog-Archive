@@ -1,8 +1,16 @@
-# Example of blog article 
+<!--
+TITLE=A test blog post from the past!
+AUTHOR=k3llydev
+DATE=December 25, 2021
+LAST_UPDATED=April 25, 2022
+HASH=an-old-post
+-->
+
+# Example of blog article
 
 You can write code:
 
-```
+```javascript
 const example = _ () => {
     return 0;
 };
