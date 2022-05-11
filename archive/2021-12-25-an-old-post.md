@@ -1,9 +1,10 @@
 <!--
-TITLE=A test blog post from the past!
 AUTHOR=k3llydev
+KEYWORDS=JavaScript,HTML,CSS
 DATE=December 25, 2021
 LAST_UPDATED=April 25, 2022
 HASH=an-old-post
+TIMESTAMP=1
 -->
 
 # Example of blog article
