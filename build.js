@@ -1,17 +1,27 @@
 const CONFIG = require('./config.json');
 const fs = require('fs');
 const path = require('path');
+const moment = require('moment');
 const MinifyHTML = require('html-minifier').minify;
 const ghpages = require('gh-pages');
 const { marked } = require('marked');
 const { highlight, getLanguage } = require('highlight.js');
+
+const customRenderer = new marked.Renderer();
+customRenderer.code = (code, lang) => {
+  const language = getLanguage(lang) ? lang : 'plaintext';
+  const highlightedCode = highlight(code, { language }).value;
+  const encodedCode = encodeURI(highlightedCode);
+  return `
+    <code class="hljs language-${language}">
+      ${encodedCode}
+    </code>
+  `;
+};
+
 marked.setOptions({
   baseUrl: CONFIG.ASSETS_HOST,
-  renderer: new marked.Renderer(),
-  highlight: function(code, lang) {
-    const language = getLanguage(lang) ? lang : 'plaintext';
-    return highlight(code, { language }).value;
-  },
+  renderer: customRenderer,
   langPrefix: 'hljs language-',
   pedantic: false,
   gfm: true,
@@ -23,7 +33,12 @@ marked.setOptions({
 });
 const markdownToHTML = markdown => {
   let output = marked.parse(markdown);
-  output = MinifyHTML(output, { collapseWhitespace: true });
+  output = MinifyHTML(output.trim(), {
+    collapseWhitespace: true,
+    minifyCSS: true,
+    minifyJS: true,
+    removeComments: true
+  });
   return output;
 };
 
@@ -38,7 +53,7 @@ const parseConfigComment = (config, fullContent) => {
   segments.shift();
   const configuration = segments.reduce((acc, segmentString) => {
     const [key, value] = segmentString.split('=');
-    acc[key.toLowerCase()] = key === 'KEYWORDS' ? value.trim().split(',') : value.trim();
+    acc[key.toLowerCase().trim()] = key.trim() === 'KEYWORDS' ? value.trim().split(',') : value.trim();
     return acc;
   }, {});
 
@@ -50,6 +65,9 @@ const parseConfigComment = (config, fullContent) => {
 
   // Remove config string from MD
   fullContent = fullContent.replace(config, '');
+
+  // Remove relative route on images
+  fullContent = fullContent.replaceAll(`.${ASSETS_DIR}/`, '');
 
   return {
     config: configuration,
@@ -68,10 +86,15 @@ const markdownItems = fs.readdirSync(ARCHIVE_DIR);
 const savedFiles = markdownItems.map(post => {
   return new Promise((resolve, reject) => {
     const filePath = path.join(__dirname, ARCHIVE_DIR, post);
+
+    const [postDate, postHash] = post.split('.');
+
     const expectedFinalFile = post.replace('.md', '.html');
     const fileContent = fs.readFileSync(filePath, {encoding: 'utf-8'});
     const fileData = substrConfig(fileContent);
     fileData.config.file = expectedFinalFile;
+    fileData.config.hash = postHash;
+    fileData.config.date = moment(postDate).format('DD MMM, YYYY');
     const htmlContent = markdownToHTML(fileData.content);
     fs.writeFile(`./${BUILD_DIR}/${expectedFinalFile}`, htmlContent, (error) => {
       if(error) reject(error);
@@ -82,6 +105,7 @@ const savedFiles = markdownItems.map(post => {
 Promise.all(savedFiles).then(items => {
   fs.writeFile(`./${BUILD_DIR}/index.json`, JSON.stringify(items), err => {
     if(err) return console.error('Error generating index file.\n', err);
+
     ghpages.publish(BUILD_DIR, {
       branch: 'archive' 
     }, (error) => {
@@ -94,6 +118,7 @@ Promise.all(savedFiles).then(items => {
         console.log('Assets uploaded successfully');
       });
     });
+
   });
 }).catch(error => console.error('An error ocurred while generating posts build.\n', error));
 

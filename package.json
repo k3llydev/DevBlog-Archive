@@ -21,6 +21,7 @@
     "gh-pages": "^3.2.1",
     "highlight.js": "^11.5.1",
     "html-minifier": "^4.0.0",
-    "marked": "^4.0.14"
+    "marked": "^4.0.14",
+    "moment": "^2.29.4"
   }
 }
