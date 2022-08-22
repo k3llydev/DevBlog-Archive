@@ -1,1 +1,24 @@
-[{"author":"Kelly","keywords":["JavaScript","HTML","CSS","BBVA"],"last_updated":"April 25, 2022","title":"Example of blog article","file":"2021-12-25.an-old-post.html","hash":"an-old-post","date":"25 Dec, 2021"},{"author":"Kelly","keywords":["POC"],"last_updated":"April 29, 2022","title":"A quick POC for my DevBlog","file":"2022-04-29.an-example-post.html","hash":"an-example-post","date":"29 Apr, 2022"},{"author":"Kelly","keywords":["JavaScript","POC"],"last_updated":"April 29, 2022","title":"Testing complex syntax with MD","file":"2022-04-29.more-simplified-syntax.html","hash":"more-simplified-syntax","date":"29 Apr, 2022"},{"author":"Kelly","keywords":["JavaScript","BankingArchitecture","WebApplications","FloatingPoint"],"title":"The banking trust thief, floating-point numbers","file":"2022-05-14.banking-trust-thief-floating-point-numbers.html","hash":"banking-trust-thief-floating-point-numbers","date":"14 May, 2022"}]
+[
+  {
+    "title": "The banking trust thief, floating-point numbers",
+    "author": "Kelly",
+    "date": "14 May, 2022",
+    "last_modified": "22 Aug, 2022",
+    "tags": [
+      "JavaScript",
+      "MobileBanking",
+      "FrontEnd"
+    ],
+    "hash": "banking-trust-thief-floating-point-numbers",
+    "complexity": {
+      "id": 3,
+      "label": "Advanced"
+    },
+    "category": {
+      "id": 1,
+      "label": "Software Architecture",
+      "abbreviated": "Software Arch."
+    },
+    "storedAs": "html"
+  }
+]
