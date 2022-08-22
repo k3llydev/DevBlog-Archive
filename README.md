@@ -1,2 +1,1 @@
-# Node usage manual
-
+# Pending documentation

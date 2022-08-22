@@ -1,0 +1,12 @@
+{
+    "ts-node": {},
+    "files": [
+        "src/index.ts",
+        "src/index.d.ts"
+      ],
+      "compilerOptions": {
+        "lib": [
+          "ES2021"
+        ]
+      }
+}
