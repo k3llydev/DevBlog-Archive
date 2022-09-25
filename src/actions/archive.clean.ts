@@ -3,4 +3,4 @@
 import clean from '../steps/clean/cleanFolders';
 import CONFIG from '../../config.prod';
 
-(clean)(CONFIG.DIRS.OUTPUT.PATH);
+(async () => await clean(CONFIG.DIRS.OUTPUT.PATH))();

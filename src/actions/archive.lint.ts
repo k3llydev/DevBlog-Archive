@@ -10,7 +10,7 @@ const lint = async (): Promise<void> => {
     $title('LINTING ARCHIVE DOCUMENTS');
 
     $log('Linting done.');
-    
+    return;
 };
 
-(lint)();
+(async () => await lint())();
