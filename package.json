@@ -7,7 +7,8 @@
   "scripts": {
     "build": "ts-node -e \"require(`./src/index.ts`).build();\"",
     "deploy": "ts-node -e \"require(`./src/index.ts`).deploy();\"",
-    "clean": "ts-node -e \"require(`./src/index.ts`).clean();\""
+    "clean": "ts-node -e \"require(`./src/index.ts`).clean();\"",
+    "lint": "ts-node -e \"require(`./src/index.ts`).lint();\""
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,6 @@
   },
   "devDependencies": {
     "@types/gh-pages": "^3.2.1",
-    "@types/highlight.js": "^10.1.0",
     "@types/html-minifier": "^4.0.2",
     "@types/marked": "^4.0.5",
     "@types/node": "^18.7.7"
