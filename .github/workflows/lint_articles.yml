@@ -1,20 +1,30 @@
-name: Node.js lint archive files
+name: Lint archive documents
 
 on:
+  workflow_dispatch:
+  merge_group:
   pull_request:
-  merge:
 
-permissions:
-  contents: read
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
 
 jobs:
-  runs-on: "ubuntu-latest"
-  timeout-minutes: 5
 
-  steps:
+  lint_archive_files:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
 
-    - name: Install dependencies
-      run: npm ci
+    steps:
 
-    - name: Lint files
-      run: npm run lint
+      - name: Setup node
+        uses: actions/setup-node@17f8bd926464a1afa4c6a11669539e9c1ba77048
+        with:
+          node-version: '16.15.0'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint files
+        run: npm run lint

@@ -76,3 +76,10 @@ export const deploy = async (): Promise<void> => {
     $log('Succesfully deployed changes.');
 
 };
+
+export const lint = async (): Promise<void> => {
+
+    $log('Linting documents...');
+
+    
+};
