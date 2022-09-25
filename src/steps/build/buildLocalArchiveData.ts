@@ -11,9 +11,9 @@ import parseDate from '../common/parseDate';
 export const buildLocalArchiveData = (files: string[], CONFIG: ConfigurationFile): RawArchiveFile[] => {
 
     const isEveryFileMarkdown: boolean = files.every(file => file.includes('.md'));
-    if(!isEveryFileMarkdown) throw new TypeError(`One or more files in archive "${CONFIG.DIRS.INPUT.LABEL}" are not a markdown file.`);
+    if(!isEveryFileMarkdown) throw new Error(`One or more files in archive "${CONFIG.DIRS.INPUT.LABEL}" are not a markdown file.`);
     const isEveryFileNameLinted: boolean = files.every((file) => lintArchiveFile(file, CONFIG.DIRS.INPUT.PATH));
-    if(!isEveryFileNameLinted) throw new TypeError(`One or more files inside archive ("${CONFIG.DIRS.INPUT.LABEL}") has an incorrect name syntax.`);
+    if(!isEveryFileNameLinted) throw new Error(`One or more files inside archive ("${CONFIG.DIRS.INPUT.LABEL}") has an incorrect name syntax.`);
 
     const archiveFiles: RawArchiveFile[] = [];
 

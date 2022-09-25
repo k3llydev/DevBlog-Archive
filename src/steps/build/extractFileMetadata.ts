@@ -31,7 +31,7 @@ export const extractMetadata = (content: string): RawPostMetadata => {
         if(line.includes('<!--') || line.includes('-->')) continue;
 
         const isMetadataLineValid = line.includes('=') && line.split('=').length === 2;
-        if(!isMetadataLineValid) throw new TypeError(`Metadata in file "CONNECT METHOD PARAMS TO RECEIVE FILE" is invalid.`);
+        if(!isMetadataLineValid) throw new Error(`Metadata in file "CONNECT METHOD PARAMS TO RECEIVE FILE" is invalid.`);
 
         const [ key, value ] = line.split('=');
         const metadataKey = key.trim().toLowerCase();

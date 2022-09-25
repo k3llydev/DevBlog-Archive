@@ -29,7 +29,7 @@ const cfg: ConfigurationFile = {
         }
     },
     HOSTS: {
-        ASSETS: 'https://cdn.k3lly.dev/gh/v1/assets/'
+        ASSETS: '/' // Changed to root directory because using Next.js as framework
     },
     DEPLOYMENT: {
         ARCHIVE_BRANCH: 'archive',

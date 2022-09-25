@@ -6,17 +6,17 @@ export const lintArchiveFile = (file: string, inputDir: string): boolean => {
     const archiveFilePath = file.replace(inputDir + '/', '');
     const [ category, year, month, day, fileName ] = archiveFilePath.split('/');
     
-    // Validate category
+    // TODO: Validate category
 
-    // Validate year
+    // TODO: Validate year
 
-    // Validate month
+    // TODO: Validate month
 
-    // Validate day
+    // TODO: Validate day
 
-    // Validate date together (year, month, day)
+    // TODO: Validate date together (year, month, day)
 
-    // Validate fileName
+    // TODO: Validate fileName
 
     return true;
 };

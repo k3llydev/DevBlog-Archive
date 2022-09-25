@@ -8,13 +8,19 @@
 
 # The banking trust thief, floating-point numbers
 
-With the technological era, banking services became pillars of today's humanity not only by providing a new and reliable method of handling money; but also by additional services like loans, insurance, investment services and many others. But unlike other services where customers might evaluate prices, effectiveness times, etc., banking services add **reputation** to the list which is englobed in **trust**.
+***Disclaimer:** Everything mentioned in this article is for educational purposes. None of the information relates to any confidential or sensitive information about my actual or previous job positions. Everything should be interpreted as a personal-professional experience.*
 
-We could prioritize objectives based on this and determine that looking after every customer's trust is crucial for building a reputation. In other words, losing one customer's trust generates a direct loss of reputation not only because they might consider leaving the institution; but because they have a social circle composed of family, friends and many other potential customers that will most likely receive a negative reference from the customer whose trust was stolen.
+With the technological era, banking services became pillars of today's humanity just by providing a new and reliable method of handling money. But unlike other services, financial services have a crucial element that determines how many customers it has, **reputation**. In other words, to build a reputation, trust should be protected at all costs.
 
-This is what makes this article relevant from **an engineering perspective**. Most topics covered are related to front-end development with computer science and architecture fragments. Diving into technical terms we'll start with one of the first steps before building any kind of software:
+This is what makes this article relevant from **an engineering perspective**. Most topics covered are related to front-end development with computer science and architecture fragments.
 
-## Choosing a tech stack, The Budget Challenge
+## Deciding how an application will be built1
+
+Choosing a tech stack isn't something that can be done in one day, not to mention that defining an architecture pattern for an application is a long-term decision that if not taken seriously could severely harm the budget later on.
+
+Since this article focuses on mobile applications, it's worth mentioning that there are three possible paths to take but not an easy way to determine which one is the best since it will always depend on the enterprise and architecture teams to decide based on the priorities.
+
+## Native vs Cross-platform vs Hybrid
 
 During the search for the most suitable tech stack, you'll probably end up evaluating market prices for software development and it's noticeable that JavaScript is one of the most popular programming languages. This language has evolved a lot through the years making it extremely cost-efficient which also creates a huge demand for developers.
 
