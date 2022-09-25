@@ -2,8 +2,12 @@ name: Node.js lint archive files
 
 on:
   workflow_dispatch:
-  merge:
+  merge_group:
   pull_request:
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
 
 jobs:
   runs-on: "ubuntu-latest"
