@@ -5,10 +5,10 @@
   "main": "./src/index",
   "typings": "./src/index",
   "scripts": {
-    "build": "ts-node -e \"require(`./src/index.ts`).build();\"",
-    "deploy": "ts-node -e \"require(`./src/index.ts`).deploy();\"",
-    "clean": "ts-node -e \"require(`./src/index.ts`).clean();\"",
-    "lint": "ts-node -e \"require(`./src/index.ts`).lint();\""
+    "build": "ts-node -p ./src/actions/archive.build.ts",
+    "deploy": "ts-node -p ./src/actions/archive.deploy.ts",
+    "clean": "ts-node -p ./src/actions/archive.clean.ts",
+    "lint": "ts-node -p ./src/actions/archive.lint.ts"
   },
   "repository": {
     "type": "git",

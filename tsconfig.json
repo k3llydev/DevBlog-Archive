@@ -1,8 +1,11 @@
 {
     "ts-node": {},
     "files": [
-        "src/index.ts",
-        "src/index.d.ts"
+        "src/actions/archive.build.ts",
+        "src/src.d.tschive.deploy.ts",
+        "src/actions/archive.clean.ts",
+        "src/actions/archive.lint.ts",
+        "src/src.d.ts"
       ],
       "compilerOptions": {
         "lib": [
