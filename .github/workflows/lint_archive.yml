@@ -1,8 +1,6 @@
 name: Lint Archive
 
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
