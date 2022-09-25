@@ -1,4 +1,4 @@
-name: Build and deploy archive
+name: Build and Deploy
 
 on:
   push:
@@ -8,21 +8,26 @@ permissions:
   contents: write
 
 jobs:
-  build:
-
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build
-    - run: npm run deploy
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy Documents
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          branch: archive
+
+      - name: Deploy Assets
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: assets
+          branch: resources
