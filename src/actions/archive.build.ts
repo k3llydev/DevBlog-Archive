@@ -43,8 +43,8 @@ const build = async (): Promise<void> => {
     }
     const finalArchive = normalizeArchive(CONFIG, archive);
     writeFileSync(joinPath(CONFIG.DIRS.OUTPUT.PATH, 'index.json'), JSON.stringify(finalArchive, null, 2));
-    $log('Archive has been successfully built.');
+    return $log('Archive has been successfully built.');
 
 };
 
-(build)();
+(async () => await build())();
