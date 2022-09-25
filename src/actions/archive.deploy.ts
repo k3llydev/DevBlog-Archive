@@ -36,4 +36,4 @@ const deploy = async (): Promise<void> => {
 
 };
 
-export default deploy;
+(deploy)();
