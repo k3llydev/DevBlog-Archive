@@ -80,16 +80,3 @@ console.log(typeof b); // Prints "number"
 ```
 
 As mentioned before, limits are involved. But it doesn't mean that it's impossible to use values outside the range, it just means that we will not have precision on arithmetic operations.
-
----
-
-<!-- 
-    REWORK
-
-    El titulo de esta sección me abrió la mente para refactorizar el titulo y la introducción.
-    Por este motivo, habrá que retrabajar en la redacción inferior para ajustarlo a una continuación técnica del previo
- -->
-## The banking trust stealer, floating-point numbers
-
-There are many
-Simple, trust. Imagine the scenario where a passive customer finally felt like obtaining a credit card. There are many reasons why customers choose where to store their money, this might not be the most common but they are defenitely part of such a huge decision: trust, reputation and safety.
