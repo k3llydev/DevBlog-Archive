@@ -81,5 +81,6 @@ export const lint = async (): Promise<void> => {
 
     $log('Linting documents...');
 
+    $log('Linting done.');
     
 };
