@@ -29,8 +29,6 @@ export const buildLocalArchiveData = (files: string[], CONFIG: ConfigurationFile
         const [ category, year, month, day, fileName ] = fileRelativeData.split('/');
         const [ hash, type ] = fileName.split('.');
 
-        console.log(category, year, month, day, fileName, hash)
-
         const title = extractTitle(fileContent);
         const postMetadata = extractMetadata(fileContent);
 
