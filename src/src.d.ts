@@ -17,6 +17,7 @@ interface ArchiveFile {
     hash: string;
     storedAs: 'html' | 'pdf';
     tags: string[];
+    description: string;
     complexity: ComplexityDetail;
     category: CategoryDetail;
 }
@@ -30,6 +31,7 @@ interface RawArchiveFile {
     tags: Array<string>
     complexity: ComplexityDetail;
     category: CategoryDetail;
+    description: string;
     content: string;
 }
 

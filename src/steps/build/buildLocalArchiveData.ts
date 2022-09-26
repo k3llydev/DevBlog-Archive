@@ -41,6 +41,7 @@ export const buildLocalArchiveData = (files: string[], CONFIG: ConfigurationFile
             date: parseDate(`${year}-${month}-${day}`, CONFIG.FORMATS.DATE),
             last_modified: postMetadata.last_modified ? parseDate(postMetadata.last_modified, CONFIG.FORMATS.DATE) : '',
             hash,
+            description: postMetadata.description,
             tags: postMetadata.keywords,
             complexity: MapLevel(postMetadata.complexity),
             category: MapCategory(category),
