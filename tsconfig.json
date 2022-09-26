@@ -2,7 +2,7 @@
     "ts-node": {},
     "files": [
         "src/actions/archive.build.ts",
-        "src/src.d.tschive.deploy.ts",
+        "src/actions/archive.deploy.ts",
         "src/actions/archive.clean.ts",
         "src/actions/archive.lint.ts",
         "src/src.d.ts"
