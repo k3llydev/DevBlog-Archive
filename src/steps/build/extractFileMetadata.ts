@@ -23,7 +23,8 @@ export const extractMetadata = (content: string): RawPostMetadata => {
         author: '',
         keywords: [],
         complexity: -1,
-        last_modified: ''
+        last_modified: '',
+        description: ''
     };
     for(let i = 0; i < lines.length; i++) {
         const line = lines[i];
