@@ -4,7 +4,7 @@
    CATEGORY=SoftwareArchitecture
    LAST_MODIFIED=2022-08-22
    KEYWORDS=JavaScript,MobileBanking,FrontEnd
-   DESCRIPTION=Banking services are pillars of today's humanity but how do they adventure into technological challenges without risking reliability? The answer is most companies don't and this article works as a guide on how to identify these problems and how you can prevent them as a Software Engineer.
+   DESCRIPTION=Banking services are pillars of today's humanity but how do they adventure into technological challenges without risking reliability? The answer is that most companies don't handle it correctly and either they remain in deprecated technologies or risk more than they should. This article works as a guide on how to identify these problems on a mobile architecture and how you can prevent them as a Software Engineer.
 -->
 
 # The banking trust thief, floating-point numbers
