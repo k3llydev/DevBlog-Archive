@@ -29,7 +29,7 @@ const cfg: ConfigurationFile = {
         }
     },
     HOSTS: {
-        ASSETS: '/' // Changed to root directory because using Next.js as framework
+        ASSETS: '/DevBlog-Archive-resources' // Always must be set to <REPO_NAME>-<BRANCH_NAME>
     },
     DEPLOYMENT: {
         ARCHIVE_BRANCH: 'archive',
