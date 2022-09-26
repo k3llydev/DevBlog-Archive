@@ -38,6 +38,7 @@ interface RawPostMetadata {
     complexity: number;
     keywords: Array<string>;
     last_modified: string;
+    description: string;
 }
 
 interface PostMetadata {
@@ -46,6 +47,7 @@ interface PostMetadata {
     keywords: Array<string>;
     category: CategoryDetail;
     last_modified: string;
+    description: string;
 }
 
 
