@@ -29,7 +29,7 @@ const cfg: ConfigurationFile = {
         }
     },
     HOSTS: {
-        ASSETS: '/DevBlog-Archive-resources' // Always must be set to <REPO_NAME>-<BRANCH_NAME>
+        ASSETS: '/DevBlog-Archive-resources/' // Always must be set to <REPO_NAME>-<BRANCH_NAME>
     },
     DEPLOYMENT: {
         ARCHIVE_BRANCH: 'archive',
