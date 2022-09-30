@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import { lintArchiveFile } from '../common/lintArchiveFile';
-import { MapLevel, MapCategory } from '../../Dictionary';
+import { MapLevel, MapCategory, MapLabel } from '../../Dictionary';
 
 import { extractMetadata } from './extractFileMetadata';
 import { extractTitle } from './extractFileTitle';
@@ -42,7 +42,7 @@ export const buildLocalArchiveData = (files: string[], CONFIG: ConfigurationFile
             last_modified: postMetadata.last_modified ? parseDate(postMetadata.last_modified, CONFIG.FORMATS.DATE) : '',
             hash,
             description: postMetadata.description,
-            tags: postMetadata.keywords,
+            tags: postMetadata.keywords.map(MapLabel),
             complexity: MapLevel(postMetadata.complexity),
             category: MapCategory(category),
             content: minifiedContent

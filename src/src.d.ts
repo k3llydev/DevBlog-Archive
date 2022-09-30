@@ -1,3 +1,9 @@
+interface TagDetail {
+    id: number;
+    label: string;
+    abbreviated: string;
+}
+
 interface CategoryDetail {
     id: number;
     label: string;
@@ -16,7 +22,7 @@ interface ArchiveFile {
     last_modified: string;
     hash: string;
     storedAs: 'html' | 'pdf';
-    tags: string[];
+    tags: TagDetail[];
     description: string;
     complexity: ComplexityDetail;
     category: CategoryDetail;
@@ -28,7 +34,7 @@ interface RawArchiveFile {
     date: string;
     hash: string;
     last_modified: string;
-    tags: Array<string>
+    tags: TagDetail[];
     complexity: ComplexityDetail;
     category: CategoryDetail;
     description: string;
