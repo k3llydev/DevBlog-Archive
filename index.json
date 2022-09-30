@@ -5,9 +5,21 @@
     "date": "14 May, 2022",
     "last_modified": "22 Aug, 2022",
     "tags": [
-      "JavaScript",
-      "MobileBanking",
-      "FrontEnd"
+      {
+        "id": 0,
+        "label": "JavaScript",
+        "abbreviated": "js"
+      },
+      {
+        "id": 1,
+        "label": "MobileBanking",
+        "abbreviated": "mobbank"
+      },
+      {
+        "id": 2,
+        "label": "Front-end",
+        "abbreviated": "front"
+      }
     ],
     "description": "Banking services are pillars of today's humanity but how do they adventure into technological challenges without risking reliability? The answer is that most companies don't handle it correctly and either they remain in deprecated technologies or risk more than they should. This article works as a guide on how to identify these problems on a mobile architecture and how you can prevent them as a Software Engineer.",
     "hash": "banking-trust-thief-floating-point-numbers",
