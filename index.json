@@ -1,36 +1,31 @@
 [
   {
-    "title": "The banking trust thief, floating-point numbers",
+    "title": "How to use my DevBlog",
     "author": "Kelly",
-    "date": "14 May, 2022",
-    "last_modified": "22 Aug, 2022",
+    "date": "25 December, 2021",
+    "last_modified": "29 December, 2022",
     "tags": [
       {
-        "id": 0,
-        "label": "JavaScript",
-        "abbreviated": "js"
+        "id": 4,
+        "label": "HowToUse",
+        "abbreviated": "how-to-use"
       },
       {
-        "id": 1,
-        "label": "MobileBanking",
-        "abbreviated": "mobbank"
-      },
-      {
-        "id": 2,
-        "label": "Front-end",
-        "abbreviated": "front"
+        "id": 5,
+        "label": "DevBlog",
+        "abbreviated": "dev-blog"
       }
     ],
-    "description": "Banking services are pillars of today's humanity but how do they adventure into technological challenges without risking reliability? The answer is that most companies don't handle it correctly and either they remain in deprecated technologies or risk more than they should. This article works as a guide on how to identify these problems on a mobile architecture and how you can prevent them as a Software Engineer.",
-    "hash": "banking-trust-thief-floating-point-numbers",
+    "description": "This post is simply an example of what can be done with both applications I've created to handle my DevBlog. It has the same features as the Markdown syntax with a few additions in the front-end application. This is a two-application workaround because one handles the posts and stores them as static HTML files and the other application retrieves this information and converts it into what my DevBlog is.",
+    "hash": "how-to-use",
     "complexity": {
-      "id": 3,
-      "label": "Advanced"
+      "id": "0",
+      "label": "Dummies"
     },
     "category": {
-      "id": 1,
-      "label": "Software Architecture",
-      "abbreviated": "Software Arch."
+      "id": 2,
+      "label": "Instructives",
+      "abbreviated": "instructives"
     },
     "storedAs": "html"
   }
