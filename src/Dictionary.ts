@@ -23,7 +23,8 @@ export const Labels = {
     'JavaScript': { id: 0, label: 'JavaScript', abbreviated: 'javascript' },
     'MobileHybrid': { id: 1, label: 'MobileHybrid', abbreviated: 'mobile-hybrid' },
     'FrontEnd': { id: 2, label: 'Front-end', abbreviated: 'front-end' },
-    'BackEnd': { id: 3, label: 'Back-end', abbreviated: 'back-end' }
+    'BackEnd': { id: 3, label: 'Back-end', abbreviated: 'back-end' },
+    'HowToUse': { id: 4, label: 'HowToUse', abbreviated: 'how-to-use' }
 };
 
 export const MapLabel = (label: string): TagDetail => {
