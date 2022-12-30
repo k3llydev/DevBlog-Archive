@@ -96,6 +96,8 @@ interface ConfigurationDeployment {
 }
 
 interface ConfigurationFile {
+    MODE: 'production' | 'development';
+    MOCK_DOCUMENTS_AMOUNT: number;
     FORMATS: ConfigurationFormats;
     OUTPUT: ConfigurationOutput;
     DIRS: ConfigurationDirectory;
