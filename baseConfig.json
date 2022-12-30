@@ -1,0 +1,30 @@
+{
+    "MODE": "production",
+    "FORMATS": {
+        "DATE": "DD MMMM, YYYY"
+    },
+    "OUTPUT": {
+        "STORAGE_TYPE": "html"
+    },
+    "DIRS": {
+        "ASSETS": {
+            "LABEL": "assets",
+            "PATH": "./assets/"
+        },
+        "OUTPUT": {
+            "LABEL": "build",
+            "PATH": "./build/"
+        },
+        "INPUT": {
+            "LABEL": "archive",
+            "PATH": "./archive/"
+        }
+    },
+    "HOSTS": {
+        "ASSETS": "/DevBlog-Archive-resources/"
+    },
+    "DEPLOYMENT": {
+        "ARCHIVE_BRANCH": "archive",
+        "ASSETS_BRANCH": "resources"
+    }
+}

@@ -7,26 +7,31 @@ import { extractTitle } from './extractFileTitle';
 import parseMarkdown from './parseMarkdown';
 
 import parseDate from '../common/parseDate';
+import forceUnixUri from '../common/forceUnixUri';
 
 export const buildLocalArchiveData = (files: string[], CONFIG: ConfigurationFile): RawArchiveFile[] => {
 
     const isEveryFileMarkdown: boolean = files.every(file => file.includes('.md'));
     if(!isEveryFileMarkdown) throw new Error(`One or more files in archive "${CONFIG.DIRS.INPUT.LABEL}" are not a markdown file.`);
-    const isEveryFileNameLinted: boolean = files.every((file) => lintArchiveFile(file, CONFIG.DIRS.INPUT.PATH));
+    const isEveryFileNameLinted: boolean = files.every((file) => lintArchiveFile(file));
     if(!isEveryFileNameLinted) throw new Error(`One or more files inside archive ("${CONFIG.DIRS.INPUT.LABEL}") has an incorrect name syntax.`);
 
     const archiveFiles: RawArchiveFile[] = [];
+    const diskRoute = forceUnixUri(process.cwd());
 
     // Read markdown file data and metadata to build the archive
     for(let i = 0; i < files.length; i++) {
         const archiveFile = files[i];
-        const fileRelativeData = archiveFile.replace(CONFIG.DIRS.INPUT.PATH + '/', '');
+
+        const fileRelativeData = archiveFile.replace(diskRoute + '/', '');
+
+        console.log('fileRelativeData', fileRelativeData);
 
         // Read file contents
         const fileContent = readFileSync(archiveFile, { encoding: 'utf-8' });
 
         // Retrieve post information from scaffoling information
-        const [ category, year, month, day, fileName ] = fileRelativeData.split('/');
+        const [ , category, year, month, day, fileName ] = fileRelativeData.split('/');
         const [ hash, type ] = fileName.split('.');
 
         const title = extractTitle(fileContent);

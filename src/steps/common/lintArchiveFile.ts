@@ -1,14 +1,14 @@
 import { readFileSync } from 'fs';
-import { join as joinPath } from 'path';
+import { join as joinPath, dirname } from 'path';
 import { extractMetadata } from '../build/extractFileMetadata';
+import forceUnixUri from './forceUnixUri';
 
-export const lintArchiveFile = (file: string, inputDir: string): boolean => {
+export const lintArchiveFile = (file: string): boolean => {
 
-    // If file is not inside archive dir
-    if(!file.includes(inputDir)) return false;
-
-    const archiveFilePath = file.replace(inputDir + '/', '');
-    const [ category, year, month, day, fileName ] = archiveFilePath.split('/');
+    const diskRoute = forceUnixUri(process.cwd());
+    const inputPath = file.replace(diskRoute, '');
+    console.log('INPUT PATH', inputPath);
+    const [ folderName, category, year, month, day, fileName ] = inputPath.split('/');
     
     // TODO: Validate category
 
@@ -23,7 +23,7 @@ export const lintArchiveFile = (file: string, inputDir: string): boolean => {
     // TODO: Validate fileName
 
     // TODO: Validate file content
-    const content = readFileSync(file).toString('utf-8');
+    const content = readFileSync(file, { encoding: 'utf-8'});
 
     // Validate metadata obtained from content
     const meta = extractMetadata(content);
