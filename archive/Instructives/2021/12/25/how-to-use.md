@@ -3,8 +3,8 @@
    COMPLEXITY=0
    CATEGORY=Instructives
    LAST_MODIFIED=2022-12-29
-   KEYWORDS=HowToUse
-   DESCRIPTION=This post is simply an example of what can be done with both applications I've created to handle my DevBlog.
+   KEYWORDS=HowToUse,DevBlog
+   DESCRIPTION=This post is simply an example of what can be done with both applications I've created to handle my DevBlog. It has the same features as the Markdown syntax with a few additions in the front-end application. This is a two-application workaround because one handles the posts and stores them as static HTML files and the other application retrieves this information and converts it into what my DevBlog is.
 -->
 
 # How to use my DevBlog
