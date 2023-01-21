@@ -38,7 +38,7 @@ export const buildLocalArchiveData = (files: string[], CONFIG: ConfigurationFile
         const postMetadata = extractMetadata(fileContent);
 
         // Modified content ready for minification
-        const minifiedContent = parseMarkdown(fileContent, title, CONFIG.DIRS.ASSETS.LABEL);
+        const minifiedContent = parseMarkdown(fileContent, title, CONFIG.DIRS.ASSETS.LABEL, CONFIG.HOSTS.ASSETS);
 
         archiveFiles.push({
             title,
