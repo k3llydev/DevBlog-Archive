@@ -1,5 +1,35 @@
 [
   {
+    "title": "Calculating &#960; inside an infinite-length List class",
+    "author": "Kelly",
+    "date": "20 January, 2023",
+    "last_modified": "21 January, 2023",
+    "tags": [
+      {
+        "id": 0,
+        "label": "JavaScript",
+        "abbreviated": "javascript"
+      },
+      {
+        "id": 6,
+        "label": "Coding challenges",
+        "abbreviated": "coding-challenges"
+      }
+    ],
+    "description": "The objective of this article is to explain the process and the information I have found through my research to create a List class that can handle infinite length while also having the possibility to calculate PI. While providing a detailed example of everything I found, this article is not intended to provide a complete response to the coding challenge.",
+    "hash": "calculating-pi-infinite-length-list-class",
+    "complexity": {
+      "id": 4,
+      "label": "Expert"
+    },
+    "category": {
+      "id": 4,
+      "label": "Algorithms",
+      "abbreviated": "algorithms"
+    },
+    "storedAs": "html"
+  },
+  {
     "title": "How to use my DevBlog",
     "author": "Kelly",
     "date": "25 December, 2021",
