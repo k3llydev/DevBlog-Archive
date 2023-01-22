@@ -16,7 +16,8 @@ const SkillLevels = [
 export const Categories = {
     'SoftwareArchitecture': { id: 1, label: 'Software Architecture', abbreviated: 'software-arch' },
     'Instructives': { id: 2, label: 'Instructives', abbreviated: 'instructives' },
-    'BestPractices': { id: 3, label: 'Best Practices', abbreviated: 'best-practices' }
+    'BestPractices': { id: 3, label: 'Best Practices', abbreviated: 'best-practices' },
+    'Algorithms': { id: 4, label: 'Algorithms', abbreviated: 'algorithms' }
 };
 
 export const Labels = {
@@ -25,7 +26,8 @@ export const Labels = {
     'FrontEnd': { id: 2, label: 'Front-end', abbreviated: 'front-end' },
     'BackEnd': { id: 3, label: 'Back-end', abbreviated: 'back-end' },
     'HowToUse': { id: 4, label: 'HowToUse', abbreviated: 'how-to-use' },
-    'DevBlog': { id: 5, label: 'DevBlog', abbreviated: 'dev-blog' }
+    'DevBlog': { id: 5, label: 'DevBlog', abbreviated: 'dev-blog' },
+    'CodingChallenges': { id: 6, label: 'Coding challenges', abbreviated: 'coding-challenges' }
 };
 
 export const MapLabel = (label: string): TagDetail => {

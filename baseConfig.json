@@ -21,7 +21,7 @@
         }
     },
     "HOSTS": {
-        "ASSETS": "/DevBlog-Archive-resources/"
+        "ASSETS": "DevBlog-Archive-resources"
     },
     "DEPLOYMENT": {
         "ARCHIVE_BRANCH": "archive",

@@ -16,5 +16,6 @@ customRenderer.code = (code, lang) => {
 };
 
 // Custom <a> tag parsing
+customRenderer.link = (href, title, text) => `<a href="${href}" title="${title}" target="_blank">${text}</a>`;
 
 export default customRenderer;
