@@ -4,7 +4,7 @@
    CATEGORY=Algorithms
    LAST_MODIFIED=2023-01-21
    KEYWORDS=JavaScript,CodingChallenges
-   DESCRIPTION=The main objective of this article is to explain the process and the information I have found through my research to create a List class that can handle infinite length while also having the possibility to calculate PI.
+   DESCRIPTION=The objective of this article is to explain the process and the information I have found through my research to create a List class that can handle infinite length while also having the possibility to calculate PI. While providing a detailed example of everything I found, this article is not intended to provide a complete response to the coding challenge.
 -->
 
 # Calculating &#960; inside an infinite-length List class
