@@ -1,7 +1,7 @@
 const sanitizeMetadata = (value: string) => {
     let result: string | Array<string> | number = value;
 
-    const isList = value.includes(',');
+    const isList = value.includes(',') && !value.includes('.');
     const isNumber = Number(value);
 
     result = result.trim();
