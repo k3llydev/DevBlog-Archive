@@ -1,6 +1,6 @@
 [
   {
-    "title": "Calculating &#960; inside an infinite-length List class",
+    "title": "Calculating &#960; within an Infinite-Length List Class",
     "author": "Kelly",
     "date": "20 January, 2023",
     "last_modified": "21 January, 2023",
@@ -16,8 +16,8 @@
         "abbreviated": "coding-challenges"
       }
     ],
-    "description": "The objective of this article is to explain the process and the information I have found through my research to create a List class that can handle infinite length while also having the possibility to calculate PI. While providing a detailed example of everything I found, this article is not intended to provide a complete response to the coding challenge.",
-    "hash": "calculating-pi-infinite-length-list-class",
+    "description": "This article explains the process and findings on creating a List class in JavaScript that can handle infinite length while also being capable of calculating PI using generator functions. It goes over the implementation of key methods like arctan and PI, providing detailed examples and explanations. Although it covers many aspects of the coding challenge, it is not intended as a complete solution to the problem, but rather as a learning resource.",
+    "hash": "calculating-pi-within-an-infinite-length-list-class",
     "complexity": {
       "id": 4,
       "label": "Expert"
@@ -30,24 +30,24 @@
     "storedAs": "html"
   },
   {
-    "title": "How to use my DevBlog",
+    "title": "How I Use My DevBlog",
     "author": "Kelly",
     "date": "25 December, 2021",
     "last_modified": "29 December, 2022",
     "tags": [
       {
         "id": 4,
-        "label": "HowToUse",
-        "abbreviated": "how-to-use"
+        "label": "HowTo",
+        "abbreviated": "how-to"
       },
       {
-        "id": 5,
-        "label": "DevBlog",
-        "abbreviated": "dev-blog"
+        "id": 7,
+        "label": "Tools",
+        "abbreviated": "tools"
       }
     ],
-    "description": "This post is simply an example of what can be done with both applications I've created to handle my DevBlog. It has the same features as the Markdown syntax with a few additions in the front-end application. This is a two-application workaround because one handles the posts and stores them as static HTML files and the other application retrieves this information and converts it into what my DevBlog is.",
-    "hash": "how-to-use",
+    "description": "This post demonstrates the capabilities of two applications created to manage my DevBlog. The first application handles posts and stores them as static HTML files, while the second retrieves and converts this information into the live blog. It also supports Markdown syntax with additional front-end features.",
+    "hash": "my-devblog",
     "complexity": {
       "id": "0",
       "label": "Dummies"
