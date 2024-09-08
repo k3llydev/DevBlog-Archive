@@ -25,9 +25,10 @@ export const Labels = {
     'MobileHybrid': { id: 1, label: 'MobileHybrid', abbreviated: 'mobile-hybrid' },
     'FrontEnd': { id: 2, label: 'Front-end', abbreviated: 'front-end' },
     'BackEnd': { id: 3, label: 'Back-end', abbreviated: 'back-end' },
-    'HowToUse': { id: 4, label: 'HowToUse', abbreviated: 'how-to-use' },
+    'HowTo': { id: 4, label: 'HowTo', abbreviated: 'how-to' },
     'DevBlog': { id: 5, label: 'DevBlog', abbreviated: 'dev-blog' },
-    'CodingChallenges': { id: 6, label: 'Coding challenges', abbreviated: 'coding-challenges' }
+    'CodingChallenges': { id: 6, label: 'Coding challenges', abbreviated: 'coding-challenges' },
+    'Tools': { id: 7, label: 'Tools', abbreviated: 'tools' }
 };
 
 export const MapLabel = (label: string): TagDetail => {
