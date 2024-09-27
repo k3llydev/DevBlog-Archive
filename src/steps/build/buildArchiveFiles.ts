@@ -1,9 +1,9 @@
-import { minify } from 'html-minifier';
+import { minify } from 'html-minifier-terser';
 import { marked } from 'marked';
 
 import customRenderer from './build-steps/customRenderer';
 
-export default (localArchive: Array<RawArchiveFile>, CONFIG: ConfigurationFile) => {
+export default async (localArchive: Array<RawArchiveFile>, CONFIG: ConfigurationFile) => {
     console.log('=============> CONFIGURING ASSETS HOST', CONFIG.HOSTS.ASSETS);
     marked.setOptions({
         baseUrl: CONFIG.HOSTS.ASSETS,
@@ -24,7 +24,7 @@ export default (localArchive: Array<RawArchiveFile>, CONFIG: ConfigurationFile) 
         localArchive[i].content = marked.parse(localArchive[i].content);
 
         // Minify generated HTML
-        localArchive[i].content = minify(localArchive[i].content.trim(), {
+        localArchive[i].content = await minify(localArchive[i].content.trim(), {
             collapseWhitespace: true,
             minifyCSS: true,
             minifyJS: true,
