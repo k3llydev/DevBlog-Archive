@@ -55,7 +55,7 @@ const build = async (): Promise<void> => {
     $log('Successfully extracted metadata...');
 
     $log('Building archive...');
-    const archive = buildArchiveFiles(localArchive, CONFIG);
+    const archive = await buildArchiveFiles(localArchive, CONFIG);
     $log('Finished archive preparations.');
 
     generateBuildFiles(archive);
